@@ -7,11 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'Castoro':'Castoro Titling, cursive',
-        'Poltawski': 'Poltawski Nowy, serif',
+        'Poltawski': 'Lato, sans-serif',
       },
       colors:{
-        "opacity-black": "rgba(0,0,0,0.5)"
+        "opacity-black": "rgba(0,0,0,0.8)"
       }
     },
   },

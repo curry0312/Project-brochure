@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
-import { banner } from "../../../data/banner";
+import { HeroBanner } from "../../../data/HomeImageBanner";
 
 function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,32 +22,34 @@ function Banner() {
         return prev + 1
       });
     }, 4000);
-    console.log(currentIndex);
     return () => {
       clearTimeout(timeout);
     };
   }, [currentIndex]);
 
   return (
-    <div className="overflow-hidden">
+    <div className="relative overflow-hidden">
       <div className="w-[400%] transition duration-1000 ease-in-out" ref={imageRef}>
         <div className="flex">
-          {banner.map((image) => {
+          {HeroBanner.map((image) => {
             return <BannerImage key={image.title} image={image.url} info={image.info} />;
           })}
         </div>
+      </div>
+      <div className="absolute left-8 bottom-0">
+        <p className="text-white text-md font-Poltawski font-bold z-40">
+          YOU CAN FIND TONS OF INTERESTING GAMES HERE
+        </p>
+        <h2 className="text-white text-[100px] font-Poltawski font-bold z-40">GAMES WORLD</h2>
       </div>
     </div>
   );
 }
 
-function BannerImage({ image, info }) {
+function BannerImage({ image }) {
   return (
     <div className="relative w-full h-screen">
-      <img className="w-full h-screen object-cover" src={image} alt={image.title} />
-      <div className="absolute left-10 bottom-10 w-[100px] h-[100px]">
-        <p className="text-white text-[100px] font-sans z-40">{info}</p>
-      </div>
+      <img className="w-full h-full object-cover" src={image} alt={image.title} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import NavLink from "../components/Navbar/NavLink";
+import NavLink from "../components/NavLink";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
 
