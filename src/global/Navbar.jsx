@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="fixed left-0 right-0 z-50 flex items-center px-10 py-8 bg-opacity-black">
       <div className="flex justify-between items-center w-full">
         <div>
-          <h1 className="text-white text-3xl font-Poltawski font-bold">
+          <h1 className="text-white text-3xl font-Sigmar font-bold">
             WANGGAMES
           </h1>
         </div>

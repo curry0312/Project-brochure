@@ -44,8 +44,9 @@ function ImageBannerComponent({ bannerImages, speed, header, subscription }) {
           })}
         </div>
       </div>
+      {/*optional*/}
       <div className="absolute left-8 bottom-0">
-        <p className="text-white text-md font-Poltawski font-bold z-40">
+        <p className="text-white text-xl font-Sigmar font-bold z-40">
           {header}
         </p>
         <h2 className="text-white text-[100px] font-Poltawski font-bold z-40">

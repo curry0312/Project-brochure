@@ -48,3 +48,18 @@ export const HomeInfoBanner = [
         ]
     },
 ]
+
+export const HomeAboutUsTextBanner = [
+    {
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus autem sapiente, quos eius adipisci hic nam inventore dolor id explicabo iste voluptate excepturi dolorem itaque assumenda nisi libero mollitia. Quidem!"
+    },
+    {
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus autem sapiente, quos eius adipisci hic nam inventore dolor id explicabo iste voluptate excepturi dolorem itaque assumenda nisi libero mollitia. Quidem!"
+    },
+    {
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus autem sapiente, quos eius adipisci hic nam inventore dolor id explicabo iste voluptate excepturi dolorem itaque assumenda nisi libero mollitia. Quidem!"
+    },
+    {
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus autem sapiente, quos eius adipisci hic nam inventore dolor id explicabo iste voluptate excepturi dolorem itaque assumenda nisi libero mollitia. Quidem!"
+    },
+]

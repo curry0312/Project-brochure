@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily:{
         'Poltawski': 'Lato, sans-serif',
+        'Sigmar': 'Sigmar, cursive',
       },
       colors:{
         "opacity-black": "rgba(0,0,0,0.8)"

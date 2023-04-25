@@ -40,7 +40,7 @@ function Banner() {
         <p className="text-white text-md font-Poltawski font-bold z-40">
           YOU CAN FIND TONS OF INTERESTING GAMES HERE
         </p>
-        <h2 className="text-white text-[100px] font-Poltawski font-bold z-40">GAMES WORLD</h2>
+        <h2 className="text-white text-[100px] font-Sigmar font-bold z-40">GAMES WORLD</h2>
       </div>
     </div>
   );

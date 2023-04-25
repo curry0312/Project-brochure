@@ -10,7 +10,7 @@ function ImageBannerComponent({ bannerImages, speed, header, subscription }) {
         if (prev === 3) return (prev = 0);
         return prev + 1;
       });
-    }, speed*1000);
+    }, speed * 1000);
     return () => {
       clearTimeout(timeout);
     };
@@ -18,28 +18,22 @@ function ImageBannerComponent({ bannerImages, speed, header, subscription }) {
 
   return (
     <div className="relative overflow-hidden">
-      <div
-        className=""
-        ref={imageRef}
-      >
-        <div className="">
-          {bannerImages?.map((image,index) => {
-            return (
-              <BannerImage
-                key={image.title}
-                image={image.url}
-                currentIndex={currentIndex}
-                index={index}
-              />
-            );
-          })}
-        </div>
-      </div>
+      {bannerImages?.map((image, index) => {
+        return (
+          <BannerImage
+            key={image.title}
+            image={image.url}
+            currentIndex={currentIndex}
+            index={index}
+          />
+        );
+      })}
+
       <div className="absolute left-8 bottom-0">
-        <p className="text-white text-md font-Poltawski font-bold z-40">
+        <p className="text-white text-md font-Sigmar font-bold z-40">
           {header}
         </p>
-        <h2 className="text-white text-[100px] font-Poltawski font-bold z-40">
+        <h2 className="text-white text-[1.2rem] font-Poltawski font-bold z-40">
           {subscription}
         </h2>
       </div>
@@ -49,7 +43,11 @@ function ImageBannerComponent({ bannerImages, speed, header, subscription }) {
 
 function BannerImage({ image, currentIndex, index }) {
   return (
-    <div className={currentIndex === index ? `imagesetting showup`:`imagesetting showdown`}>
+    <div
+      className={
+        currentIndex === index ? `imagesetting showup` : `imagesetting showdown`
+      }
+    >
       <img
         className="w-full h-full object-cover"
         src={image}

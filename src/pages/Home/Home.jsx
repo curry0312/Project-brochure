@@ -1,3 +1,4 @@
+import AboutUs from "./AboutUs/AboutUs"
 import Banner from "./Banner/Banner"
 import Intro from './Intro/Intro'
 
@@ -6,6 +7,7 @@ function Home() {
     <div>
         <Banner />
         <Intro />
+        <AboutUs />
     </div>
   )
 }
