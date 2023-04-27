@@ -1,20 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-
-function ImageBannerComponent({ bannerImages, speed, header, subscription }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const imageRef = useRef();
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setCurrentIndex((prev) => {
-        if (prev === 3) return (prev = 0);
-        return prev + 1;
-      });
-    }, speed * 1000);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [currentIndex]);
+function ImageBannerComponent({ bannerImages, currentIndex }) {
 
   return (
     <div className="relative overflow-hidden">
@@ -28,15 +12,6 @@ function ImageBannerComponent({ bannerImages, speed, header, subscription }) {
           />
         );
       })}
-
-      <div className="absolute left-8 bottom-0">
-        <p className="text-white text-md font-Sigmar font-bold z-40">
-          {header}
-        </p>
-        <h2 className="text-white text-[1.2rem] font-Poltawski font-bold z-40">
-          {subscription}
-        </h2>
-      </div>
     </div>
   );
 }

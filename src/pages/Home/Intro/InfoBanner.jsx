@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 
-function InfoBannerComponent({ bannerInfo }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+function InfoBannerComponent({ bannerInfo, currentIndex }) {
   const imageRef = useRef();
 
   function transformImage() {
@@ -13,18 +12,6 @@ function InfoBannerComponent({ bannerInfo }) {
 
   useEffect(() => {
     transformImage();
-  }, [currentIndex]);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setCurrentIndex((prev) => {
-        if (prev === 3) return (prev = 0);
-        return prev + 1;
-      });
-    }, 5000);
-    return () => {
-      clearTimeout(timeout);
-    };
   }, [currentIndex]);
 
   return (
@@ -50,7 +37,7 @@ function InfoBannerComponent({ bannerInfo }) {
                 </div>
               </div>
               {/*Button*/}
-              <div className="flex flex-col justify-end pb-5">
+              <div className="flex flex-col justify-end">
                 <button
                   className="bg-red-600 text-white font-Poltawski px-8 py-4 flex items-center group hover:bg-red-900"
                   onClick={null}
