@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { AboutUsBanner } from "../../../data/HomeImageBanner";
+import { AboutUsImagesBanner } from "../../../data/HomeImageBanner";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import { HomeAboutUsTextBanner } from "../../../data/HomeInfoBanner";
+import { AboutUsTextBanner } from "../../../data/HomeInfoBanner";
 import { useEffect } from "react";
 import { useRef } from "react";
 
@@ -50,7 +50,7 @@ function AboutUs() {
             {/*Text*/}
             <div className="overflow-hidden basis-1/2">
               <div ref={textRef} className="w-[400%] flex transition duration-1000 ease-in-out">
-                {HomeAboutUsTextBanner.map((e, index) => {
+                {AboutUsTextBanner.map((e, index) => {
                   return (
                     <div className="w-full h-full" key={index}>
                       <p className="text-gray-600 font-Poltawski w-[50%]">{e.text}</p>
@@ -78,7 +78,7 @@ function AboutUs() {
           {/*Images Banner*/}
           <div className="overflow-hidden basis-1/2 md:h-[600px]">
             <div ref={imageRef} className="w-[400%] h-full flex transition duration-1000 ease-in-out">
-              {AboutUsBanner.map((e, index) => {
+              {AboutUsImagesBanner.map((e, index) => {
                 return (
                   <div className="w-[100%] h-full" key={index}>
                     <img

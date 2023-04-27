@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
-import { HeroBanner } from "../../../data/HomeImageBanner";
+import { HeroImagesBanner } from "../../../data/HomeImageBanner";
 
 function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,7 +31,7 @@ function Banner() {
     <div className="relative overflow-hidden">
       <div className="w-[400%] transition duration-1000 ease-in-out" ref={imageRef}>
         <div className="flex">
-          {HeroBanner.map((image) => {
+          {HeroImagesBanner.map((image) => {
             return <BannerImage key={image.title} image={image.url} info={image.info} />;
           })}
         </div>
