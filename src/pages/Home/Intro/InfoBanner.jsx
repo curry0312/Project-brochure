@@ -22,12 +22,13 @@ function InfoBannerComponent({ bannerInfo, currentIndex }) {
       >
         {bannerInfo?.map((info, index) => {
           return (
-            <div className="w-full flex justify-between" key={index}>
+            <div key={index} className="w-full flex flex-col justify-between md:flex-row">
+              {/*Text*/}
               <div className="flex flex-col">
                 {/*Header*/}
                 <div className="">
-                  <h3 className="font-Sigmar text-3xl">{info.title}</h3>
-                  <p className="font-Poltawski text-xl">{info.subscription}</p>
+                  <h3 className="font-Sigmar text-xl md:text-3xl">{info.title}</h3>
+                  <p className="font-Poltawski text-sm md:text-xl">{info.subscription}</p>
                 </div>
                 {/*Features*/}
                 <div>
@@ -59,21 +60,21 @@ function InfoBannerComponent({ bannerInfo, currentIndex }) {
 function Detail({ category, rating, level }) {
   return (
     <div className="p-2">
-      <div className="flex">
-        <div className="p-4 border-r-2 border-gray-400">
-          <h4 className="text-black text-2xl font-Poltawski font-bold">
+      <div className="flex flex-col md:flex-row">
+        <div className="p-4 border-r-0 border-gray-400 md:border-r-2">
+          <h4 className="text-black text-md font-Poltawski font-bold md:text-2xl">
             CATEGORY
           </h4>
           <p className="font-Poltawski">{category}</p>
         </div>
-        <div className="p-4 border-r-2 border-gray-400">
-          <h4 className="text-black text-2xl font-Poltawski font-bold">
+        <div className="p-4 border-r-0 border-gray-400 md:border-r-2">
+          <h4 className="text-black text-md font-Poltawski font-bold md:text-2xl">
             RATING
           </h4>
           <p className={parseFloat(rating) > 7 ? 'text-red-500 font-Poltawski':'font-Poltawski'}>{rating}</p>
         </div>
         <div className="p-4">
-          <h4 className="text-black text-2xl font-Poltawski font-bold">
+          <h4 className="text-black text-md font-Poltawski font-bold md:text-2xl">
             LEVEL
           </h4>
           <p className="font-Poltawski">{level}</p>

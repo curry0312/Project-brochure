@@ -38,7 +38,7 @@ function AboutUs() {
   return (
     <div className="px-4">
       <div className="w-[90%] mx-auto">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col gap-3 md:flex-row">
           {/*Text Banner*/}
           <div className="basis-1/2 flex flex-col justify-between">
             {/*Header*/}

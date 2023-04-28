@@ -4,10 +4,10 @@ import { FaqQuestionBanner } from "../../data/FaqInfoBanner";
 
 function Faq() {
   return (
-    <section>
+    <section className="pt-[120px]">
       {/*Header*/}
-      <div className="flex justify-center items-center">
-        <h6 className="text-gray-300 font-Sigmar text-[500px]">FAQS</h6>
+      <div className="flex justify-center items-center w-[90%] mx-auto">
+        <h6 className="text-gray-300 font-Sigmar text-[100px] sm:text-[200px] md:text-[300px]">FAQS</h6>
       </div>
 
       {/*Questions section*/}
@@ -36,7 +36,7 @@ function Question({ question, answer }) {
       >
         {/*Text*/}
         <div className="relative p-5 flex-1">
-          <p className="w-[90%] font-Sigmar text-xl">{question}</p>
+          <p className="w-[90%] font-Sigmar text-sm md:text-xl">{question}</p>
         </div>
         {/*Slide down button*/}
         <div className="w-[90px] bg-red-800 overflow-hidden">
@@ -55,7 +55,7 @@ function Question({ question, answer }) {
       <div
         className={
           slideown === true
-            ? `h-[100px] transition-height duration-300 ease-in-out`
+            ? `h-[200px] transition-height duration-300 ease-in-out md:h-[150px]`
             : `h-0 transition-height duration-300 ease-in-out`
         }
       >

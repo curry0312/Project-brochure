@@ -3,7 +3,7 @@ import { IntroImagesBanner } from "../../../data/HomeImageBanner";
 
 function BannerToggle({currentIndex, setCurrentIndex}) {
   return (
-    <div className="absolute right-0 top-[50%] bottom-[50%] -rotate-90">
+    <div className="flex justify-center items-center mt-5 md:absolute md:right-0 md:top-[50%] md:bottom-[50%] md:-rotate-90">
       <div className="flex gap-4">
         {IntroImagesBanner.map((e, index) => {
           return (

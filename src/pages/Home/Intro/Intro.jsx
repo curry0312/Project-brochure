@@ -3,7 +3,7 @@ import ImageBannerShowComponent from "../../../components/ImageBannerShowCompone
 import { IntroImagesBanner } from "../../../data/HomeImageBanner";
 import { IntroTextBanner } from "../../../data/HomeInfoBanner";
 import InfoBanner from "./InfoBanner";
-import InfoToggle from "./BannerToggle";
+import BannerToggle from "./BannerToggle";
 
 function Intro() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,7 +20,7 @@ function Intro() {
     };
   }, [currentIndex]);
   return (
-    <section className="relative p-10 bg-gray-200">
+    <section className="relative p-5 bg-gray-200 md:p-10">
       <div className="w-[70%] h-[90%] my-auto mx-auto">
         <ImageBannerShowComponent
           bannerImages={IntroImagesBanner}
@@ -33,7 +33,7 @@ function Intro() {
           setCurrentIndex={setCurrentIndex}
         />
       </div>
-      <InfoToggle currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
+      <BannerToggle currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
     </section>
   );
 }

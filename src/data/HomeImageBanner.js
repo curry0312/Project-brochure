@@ -56,14 +56,14 @@ export const AboutUsImagesBanner = [
 export const FeaturesImagesBanner = [
   {
     title: "FAQ",
-    url: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    url: "https://images.pexels.com/photos/221164/pexels-photo-221164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     subscription:
       "Find out everything you need to know about playing games or finding games.",
   },
   
   {
     title: "Contact",
-    url: "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    url: "https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg",
     subscription:
       "We're here to help. Contact us for any questions or concerns. Don't hesitate to reach out - we're just a phone call or email away!",
   },
