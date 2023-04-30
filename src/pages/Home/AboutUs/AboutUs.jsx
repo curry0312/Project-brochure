@@ -5,6 +5,8 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { AboutUsTextBanner } from "../../../data/HomeInfoBanner";
 import { useEffect } from "react";
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import { enterInButtom } from "../../../assets/animation/motion";
 
 function AboutUs() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,14 +15,14 @@ function AboutUs() {
 
   function togglePrev() {
     setCurrentIndex((prevIndex) => {
-        if(currentIndex === 0) return prevIndex
-        return prevIndex - 1
+      if (currentIndex === 0) return prevIndex;
+      return prevIndex - 1;
     });
   }
   function toggleNext() {
-    setCurrentIndex((prevIndex) => { 
-        if(currentIndex === 3) return prevIndex
-        return prevIndex + 1
+    setCurrentIndex((prevIndex) => {
+      if (currentIndex === 3) return prevIndex;
+      return prevIndex + 1;
     });
   }
 
@@ -42,33 +44,55 @@ function AboutUs() {
           {/*Text Banner*/}
           <div className="basis-1/2 flex flex-col justify-between">
             {/*Header*/}
-            <div>
+            <motion.div
+              variants={enterInButtom(100, 0.5, 0.8).container}
+              initial="hidden"
+              whileInView="show"
+            >
               <h2 className="text-black text-[3rem] font-Sigmar font-bold">
                 WE ARE GAMES WORLD
               </h2>
-            </div>
+            </motion.div>
             {/*Text*/}
-            <div className="overflow-hidden basis-1/2">
-              <div ref={textRef} className="w-[400%] flex transition duration-1000 ease-in-out">
+            <motion.div
+              className="overflow-hidden basis-1/2"
+              variants={enterInButtom(100, 0.9, 0.9).container}
+              initial="hidden"
+              whileInView="show"
+            >
+              <div
+                ref={textRef}
+                className="w-[400%] flex transition duration-1000 ease-in-out"
+              >
                 {AboutUsTextBanner.map((e, index) => {
                   return (
                     <div className="w-full h-full" key={index}>
-                      <p className="text-gray-600 font-Poltawski w-[50%]">{e.text}</p>
+                      <p className="text-gray-600 font-Poltawski w-[50%]">
+                        {e.text}
+                      </p>
                     </div>
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
             {/*Control Buttons*/}
             <div>
               <button
-                className={currentIndex === 0 ? `w-10 h-10 bg-gray-400 text-white` : `w-10 h-10 bg-red-700 text-white`}
+                className={
+                  currentIndex === 0
+                    ? `w-10 h-10 bg-gray-400 text-white`
+                    : `w-10 h-10 bg-red-700 text-white`
+                }
                 onClick={() => togglePrev()}
               >
                 <NavigateBeforeIcon />
               </button>
               <button
-                className={currentIndex === 3 ? `w-10 h-10 bg-gray-400 text-white` : `w-10 h-10 bg-red-700 text-white`}
+                className={
+                  currentIndex === 3
+                    ? `w-10 h-10 bg-gray-400 text-white`
+                    : `w-10 h-10 bg-red-700 text-white`
+                }
                 onClick={() => toggleNext()}
               >
                 <NavigateNextIcon />
@@ -76,8 +100,16 @@ function AboutUs() {
             </div>
           </div>
           {/*Images Banner*/}
-          <div className="overflow-hidden basis-1/2 md:h-[600px]">
-            <div ref={imageRef} className="w-[400%] h-full flex transition duration-1000 ease-in-out">
+          <motion.div
+            className="overflow-hidden basis-1/2 md:h-[600px]"
+            variants={enterInButtom(100, 0.1, 0.7).container}
+            initial="hidden"
+            whileInView="show"
+          >
+            <div
+              ref={imageRef}
+              className="w-[400%] h-full flex transition duration-1000 ease-in-out"
+            >
               {AboutUsImagesBanner.map((e, index) => {
                 return (
                   <div className="w-[100%] h-full" key={index}>
@@ -90,7 +122,7 @@ function AboutUs() {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

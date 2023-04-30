@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { HeroImagesBanner } from "../../../data/HomeImageBanner";
+import { motion } from "framer-motion";
+import { enterInLeft, showup } from "../../../assets/animation/motion";
 
 function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,12 +50,24 @@ function Banner() {
         </div>
       </div>
       <div className="absolute left-8 bottom-0">
-        <p className="text-white text-xs font-Poltawski font-bold z-40 md:text-md">
+        <motion.p
+          className="text-white text-xs font-Poltawski font-bold z-40 md:text-md"
+          variants={enterInLeft(-200,1.4,0.9).container}
+          viewport={{ once: true }}
+          initial="hidden"
+          whileInView="show"
+        >
           YOU CAN FIND TONS OF INTERESTING GAMES HERE
-        </p>
-        <h2 className="text-white text-[50px] font-Sigmar font-bold z-40 sm:text-[70px] md:text-[100px]">
+        </motion.p>
+        <motion.h2
+          className="text-white text-[50px] font-Sigmar font-bold z-40 sm:text-[70px] md:text-[100px]"
+          variants={enterInLeft(-200,0.4,0.9).container}
+          viewport={{ once: true }}
+          initial="hidden"
+          whileInView="show"
+        >
           GAMES WORLD
-        </h2>
+        </motion.h2>
       </div>
     </div>
   );
