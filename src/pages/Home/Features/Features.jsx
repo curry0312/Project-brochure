@@ -29,9 +29,12 @@ function Feature({ image, text, subscription, animationDelay }) {
   return (
     <motion.div
       className="flex flex-col group cursor-pointer sm:flex-row"
-      variants={enterInButtom(200, animationDelay, 1.1).container}
+      variants={enterInButtom(100, animationDelay, 1.1).container}
       initial="hidden"
       whileInView="show"
+      viewport={{
+        once: true
+      }}
     >
       {/*Image*/}
       <div className="basis-2/5 overflow-hidden">

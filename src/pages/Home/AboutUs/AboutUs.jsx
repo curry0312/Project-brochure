@@ -67,7 +67,7 @@ function AboutUs() {
                 {AboutUsTextBanner.map((e, index) => {
                   return (
                     <div className="w-full h-full" key={index}>
-                      <p className="text-gray-600 font-Poltawski w-[50%]">
+                      <p className="text-gray-600 font-Poltawski w-[90%] md:w-[50%]">
                         {e.text}
                       </p>
                     </div>

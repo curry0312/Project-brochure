@@ -55,7 +55,7 @@ function Question({ question, answer }) {
       <div
         className={
           slideown === true
-            ? `h-[200px] transition-height duration-300 ease-in-out md:h-[150px]`
+            ? `h-[250px] transition-height duration-300 ease-in-out sm:h-[200px] md:h-[150px]`
             : `h-0 transition-height duration-300 ease-in-out`
         }
       >

@@ -51,7 +51,7 @@ export const enterInButtom = (
         transition: {
           duration: duration,
           delay: delay,
-        },
+        }
       },
     },
   };
